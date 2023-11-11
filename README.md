@@ -71,3 +71,19 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+Relaciones ManyToOne a la misma tabla
+
+Actualización de usuarios
+
+Bloqueo de usuarios
+
+Protección del GqlSchema
+
+Módulo asíncronos
+
+Factory functions
+
+Uso de módulos en factory functions
+
+Roles y actualización de usuario que modifica registros.

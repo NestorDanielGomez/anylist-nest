@@ -1,12 +1,15 @@
 import { PassportStrategy } from "@nestjs/passport";
 import { ExtractJwt, Strategy } from "passport-jwt";
-import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { User } from "../../users/entities/user.entity";
+import { JwtPayload } from "../interfaces/jwt-payload.interface";
+import { AuthService } from '../auth.service';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
     constructor(
+        private readonly authService: AuthService,
         configService: ConfigService
     ) {
         super({
@@ -15,7 +18,10 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         })
     }
 
-    async validate(payload: any): Promise<User> {
-        throw new UnauthorizedException("Token no valido")
+    async validate(payload: JwtPayload): Promise<User> {
+        const { id } = payload
+        const user = await this.authService.validateUser(id)
+        return user
+
     }
 }
