@@ -24,11 +24,11 @@ type AuthResponse {
 }
 
 type Query {
-  items: [Item!]!
-  item(id: ID!): Item!
+  revalidate: AuthResponse!
   users(roles: [ValidRoles!] = []): [User!]!
   user(id: ID!): User!
-  revalidate: AuthResponse!
+  items: [Item!]!
+  item(id: ID!): Item!
 }
 
 """roles permitidos del enum"""
@@ -39,12 +39,33 @@ enum ValidRoles {
 }
 
 type Mutation {
+  signup(signUpInput: SignUpInput!): AuthResponse!
+  login(LoginInput: LoginInput!): AuthResponse!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  blockUser(id: ID!): User!
   createItem(createItemInput: CreateItemInput!): Item!
   updateItem(updateItemInput: UpdateItemInput!): Item!
   borrarItem(id: ID!): Item!
-  blockUser(id: ID!): User!
-  signup(signUpInput: SignUpInput!): AuthResponse!
-  login(LoginInput: LoginInput!): AuthResponse!
+}
+
+input SignUpInput {
+  email: String!
+  fullName: String!
+  password: String!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+input UpdateUserInput {
+  email: String
+  fullName: String
+  password: String
+  id: ID!
+  roles: [ValidRoles!]
+  isActive: Boolean
 }
 
 input CreateItemInput {
@@ -58,15 +79,4 @@ input UpdateItemInput {
   quantity: Float
   quantityUnits: String
   id: ID!
-}
-
-input SignUpInput {
-  email: String!
-  fullName: String!
-  password: String!
-}
-
-input LoginInput {
-  email: String!
-  password: String!
 }
