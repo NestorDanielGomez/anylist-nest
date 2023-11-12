@@ -28,22 +28,35 @@
 
 ## Installation
 
-```bash
-$ npm install
+# Dev
+
+1. Clonar el proyecto
+2. Copiar el `env.template` y renombar a `.env`
+3. Ejecutar
+
+```
+yarn install
 ```
 
-## Running the app
+4. Levantar la imagen (Docker desktop)
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
+docker-compose up -d
+```
+
+5. Levantar el backend de Nest
+
+```
+yarn start:dev
+```
+
+6. Visiar el sitio
+
+```
+localhost:3000/graphql
+```
+
+````
 
 ## Test
 
@@ -56,7 +69,7 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
-```
+````
 
 ## Support
 
