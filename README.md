@@ -100,3 +100,13 @@ Factory functions
 Uso de módulos en factory functions
 
 Roles y actualización de usuario que modifica registros.
+
+Paginaciones
+
+Búsquedas por nombre
+
+Página y buscar de forma simultánea
+
+Paginar y buscar por items dentro de usuarios
+
+Aplicar los filtros a la hora de consultar los items de los usuarios.

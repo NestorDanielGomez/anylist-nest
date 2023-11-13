@@ -9,7 +9,7 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
-      forbidNonWhitelisted: true,
+      //forbidNonWhitelisted: true, para poder aceptar multiples args en el findAll, esta validacion la hace graphql
     })
   );
 
