@@ -110,3 +110,21 @@ Página y buscar de forma simultánea
 Paginar y buscar por items dentro de usuarios
 
 Aplicar los filtros a la hora de consultar los items de los usuarios.
+
+manejar una tabla que es enteramente relacional con otras tablas para manejar las listas y los items de sus listas, que a su vez, tienen una relación con los items de nuestra base de datos.
+
+Puntualmente veremos:
+
+Relaciones
+
+Maestro detalles
+
+SEEDs
+
+Constraints
+
+Filtros, paginar y conteo
+
+Actualizar elementos
+
+Actualizaciones con query builders

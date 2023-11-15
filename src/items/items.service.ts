@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Like, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Item } from './entities/item.entity';
 import { User } from './../users/entities/user.entity';
@@ -26,7 +26,8 @@ export class ItemsService {
     const queryBuilder = this.itemsRepository.createQueryBuilder()
       .take(limit)
       .skip(offset)
-      .where(`"userId" = :userId`, { userId: user.id })
+      .where(`"userId" = :userId`, { userId: user.id });
+
     if (search) {
       queryBuilder.andWhere(`LOWER(name) like:name`, { name: `%${search.toLowerCase()}%` })
     }
@@ -42,8 +43,6 @@ export class ItemsService {
     //   }
     // })
     // return allItems;
-
-
   }
 
   async findOne(id: string, user: User): Promise<Item> {
