@@ -1,25 +1,32 @@
 export const SEED_USERS = [
     {
-        fullName: 'Nestor Gomez',
-        email: 'nestor@google.com',
-        password: 'nestor',
+        fullName: 'Fernando Herrera',
+        email: 'fernando@google.com',
+        password: '123456',
         roles: ['admin', 'superUser', 'user'],
         isActive: true
     },
     {
-        fullName: 'Leticia Zanel',
-        email: 'leticia@google.com',
-        password: 'leticia',
+        fullName: 'Melissa Flores',
+        email: 'melissa@google.com',
+        password: '123456',
         roles: ['user'],
         isActive: true
     },
     {
-        fullName: 'Bautista Gomez Zanel',
-        email: 'bautista@google.com',
-        password: 'bautista',
+        fullName: 'Hernando Vallejo',
+        email: 'hernando@google.com',
+        password: '123456',
         roles: ['user'],
         isActive: false
     },
+]
+
+
+export const SEED_LISTS = [
+    { name: 'Supermercado' },
+    { name: 'Diario' },
+    { name: 'Fin de semana' },
 ]
 
 export const SEED_ITEMS = [
@@ -539,4 +546,3 @@ export const SEED_ITEMS = [
         category: "other"
     },
 ]
-
