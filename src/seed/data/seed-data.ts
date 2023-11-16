@@ -1,22 +1,22 @@
 export const SEED_USERS = [
     {
-        fullName: 'Fernando Herrera',
-        email: 'fernando@google.com',
-        password: '123456',
+        fullName: 'Nestor Gomez',
+        email: 'nestor@correo.com',
+        password: 'nestor',
         roles: ['admin', 'superUser', 'user'],
         isActive: true
     },
     {
-        fullName: 'Melissa Flores',
-        email: 'melissa@google.com',
-        password: '123456',
+        fullName: 'Leticia Zanel',
+        email: 'leticia@correo.com',
+        password: 'leticia',
         roles: ['user'],
         isActive: true
     },
     {
-        fullName: 'Hernando Vallejo',
-        email: 'hernando@google.com',
-        password: '123456',
+        fullName: 'Bautista Gomez Zanel',
+        email: 'bautista@correo.com',
+        password: 'bautista',
         roles: ['user'],
         isActive: false
     },

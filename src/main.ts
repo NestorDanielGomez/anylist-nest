@@ -13,7 +13,7 @@ async function bootstrap() {
     })
   );
 
-  await app.listen(3000);
-  logger.log(`App corriento en el puerto ${process.env.PORT}`)
+  await app.listen(process.env.PORT || 3000);
+  logger.log(`App corriento en el puerto ${process.env.PORT || 3000}`)
 }
 bootstrap();
