@@ -1,4 +1,4 @@
-import * as bcrypt from "bcrypt"
+import * as bcrypt from "bcryptjs"
 import { BadRequestException, Injectable, InternalServerErrorException, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateUserInput } from './dto/create-user.input';

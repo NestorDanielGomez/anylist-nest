@@ -12,11 +12,13 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descripción
+
+Con un usuario registrado se pueden crear listas de productos, y agregar productos a dichas listas.
+Crud completo. en el endpoint de graphql estan registrado se puede acceder a todos los querys y mutations disponibles.
+Una vez hecho el login, copiar el token generado y crear un header de Authorization = Bearer "token copieado"
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
 
 # Dev
 
@@ -46,12 +48,4 @@ yarn start:dev
 localhost:3000/graphql
 ```
 
-```
-localhost:3000/graphql
-```
-
 7. Ejecutar la **"mutation"** executeSeed, para llenar la base de datos con información
-
-```
-
-```
